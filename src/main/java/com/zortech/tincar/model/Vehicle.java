@@ -15,6 +15,7 @@ public class Vehicle {
     @Column(name = "ID")
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "TYPE")
     private VehicleType type;
 
@@ -36,7 +37,7 @@ public class Vehicle {
     @Column(name = "LOCATION_POINT")
     private String locationPoint;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="USER_ID", nullable=false)
     private User user;
 

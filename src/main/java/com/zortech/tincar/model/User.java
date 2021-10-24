@@ -24,10 +24,10 @@ public class User {
     @Column(name = "EMAIL")
     private String email;
 
-    @OneToMany(mappedBy = "user", targetEntity = Vehicle.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", targetEntity = Vehicle.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Vehicle> vehicles;
 
-    @OneToMany(mappedBy = "user", targetEntity = Feedback.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", targetEntity = Feedback.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Feedback> feedbacks;
 
     public Long getId() {

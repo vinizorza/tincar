@@ -1,6 +1,5 @@
 package com.zortech.tincar.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.zortech.tincar.model.enums.FeedbackType;
 
 import javax.persistence.*;
@@ -15,6 +14,7 @@ public class Feedback {
     @Column(name = "ID")
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "TYPE")
     private FeedbackType type;
 
