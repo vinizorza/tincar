@@ -1,0 +1,1 @@
+CREATE TABLE public.tuser (id int8 IDENTITY PRIMARY KEY NOT NULL, email varchar(255) NULL, name varchar(255) NULL, password varchar(255) NULL, phone_number varchar(255) NULL)
